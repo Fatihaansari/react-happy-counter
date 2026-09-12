@@ -9,27 +9,30 @@ export function Counter() {
   const reset = () => setCount(0);
 
   return (
-    <div className="flex flex-col items-center gap-8 rounded-2xl border border-border bg-card p-8 shadow-lg sm:p-12">
-      <h1 className="text-2xl font-bold tracking-tight text-card-foreground sm:text-3xl">
-        Counter App
-      </h1>
+    <section className="w-full max-w-sm rounded-2xl border border-border bg-card p-6 shadow-sm sm:max-w-md sm:p-10">
+      <div className="flex flex-col items-center gap-6 sm:gap-8">
+        <header className="text-center">
+          <h1 className="text-xl font-semibold tracking-tight text-card-foreground sm:text-2xl">
+            Counter
+          </h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Increase, decrease, or reset the value
+          </p>
+        </header>
 
-      <div
-        className="flex h-32 w-32 items-center justify-center rounded-full bg-secondary text-5xl font-bold text-secondary-foreground sm:h-40 sm:w-40 sm:text-6xl"
-        aria-live="polite"
-      >
-        {count}
+        <div
+          className="flex aspect-square w-32 items-center justify-center rounded-full bg-secondary text-6xl font-semibold tracking-tight text-secondary-foreground sm:w-40 sm:text-7xl"
+          aria-live="polite"
+        >
+          {count}
+        </div>
+
+        <div className="grid w-full grid-cols-3 gap-3 sm:gap-4">
+          <CounterButton label="Decrease" onClick={decrease} variant="ghost" />
+          <CounterButton label="Reset" onClick={reset} variant="secondary" />
+          <CounterButton label="Increase" onClick={increase} variant="primary" />
+        </div>
       </div>
-
-      <div className="flex flex-wrap justify-center gap-4">
-        <CounterButton label="Decrease" onClick={decrease} variant="secondary" />
-        <CounterButton label="Reset" onClick={reset} variant="danger" />
-        <CounterButton label="Increase" onClick={increase} variant="primary" />
-      </div>
-
-      <p className="text-sm text-muted-foreground">
-        Click the buttons to change the count.
-      </p>
-    </div>
+    </section>
   );
 }
