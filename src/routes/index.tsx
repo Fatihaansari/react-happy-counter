@@ -6,9 +6,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Counter App" },
-      { name: "description", content: "A simple beginner-friendly counter app built with React." },
+      { name: "description", content: "A beautiful, beginner-friendly counter app built with React." },
       { property: "og:title", content: "Counter App" },
-      { property: "og:description", content: "A simple beginner-friendly counter app built with React." },
+      { property: "og:description", content: "A beautiful, beginner-friendly counter app built with React." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
