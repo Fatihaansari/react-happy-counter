@@ -1,7 +1,7 @@
 interface CounterButtonProps {
   label: string;
   onClick: () => void;
-  variant?: "primary" | "secondary" | "danger";
+  variant?: "primary" | "secondary" | "ghost";
 }
 
 export function CounterButton({
@@ -11,17 +11,18 @@ export function CounterButton({
 }: CounterButtonProps) {
   const variantClasses = {
     primary:
-      "bg-primary text-primary-foreground hover:bg-primary/90",
+      "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90",
     secondary:
       "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-    danger:
-      "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+    ghost:
+      "border border-border bg-background text-foreground hover:bg-accent",
   };
 
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`rounded-lg px-6 py-3 text-lg font-semibold shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${variantClasses[variant]}`}
+      className={`shrink-0 rounded-xl px-5 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 sm:px-6 sm:py-3 sm:text-base ${variantClasses[variant]}`}
       aria-label={label}
     >
       {label}

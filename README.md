@@ -1,11 +1,11 @@
 # Counter App
 
-A simple, beginner-friendly counter app built with React, TypeScript, and Vite.
+A simple, professional counter app built with React and TypeScript.
 
 ## Features
 
 - Increase, decrease, and reset the count
-- Clean, responsive UI
+- Clean, responsive UI that works on mobile and desktop
 - Functional components with `useState`
 - Separate, reusable components
 
@@ -14,7 +14,7 @@ A simple, beginner-friendly counter app built with React, TypeScript, and Vite.
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)
-- A package manager such as npm, yarn, pnpm, or bun
+- npm, yarn, pnpm, or bun
 
 ### Run locally
 
@@ -37,7 +37,7 @@ A simple, beginner-friendly counter app built with React, TypeScript, and Vite.
    npm run dev
    ```
 
-4. Open your browser at the URL shown in the terminal (usually `http://localhost:8080`).
+4. Open your browser at the URL shown in the terminal.
 
 ## Build for production
 
@@ -45,16 +45,12 @@ A simple, beginner-friendly counter app built with React, TypeScript, and Vite.
 npm run build
 ```
 
-The production-ready files will be generated in the `dist/` folder.
-
 ## Deploy to Vercel
 
 1. Push this project to a GitHub repository.
 2. Go to [Vercel](https://vercel.com) and click **Add New Project**.
 3. Import your GitHub repository.
-4. Keep the default settings (Vercel will detect Vite automatically) and click **Deploy**.
-
-Your counter app will be live at the URL Vercel provides.
+4. Keep the default settings and click **Deploy**.
 
 ## Project Structure
 
@@ -71,5 +67,4 @@ src/
 
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
